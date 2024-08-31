@@ -42,3 +42,24 @@ if (nombre) {// continua si coloca su nombre
     } else {
         alert("No pusiste tu nombre"); //por si no pone su nombre, le tira el "no ingresaste tu nombre"
     }
+
+    let documento = prompt ("Ingrese su DNI/Documento")
+    if (documento !== null){
+        const confirmacion = confirm(`Confirmas que tu documento es: ${documento}`);
+
+            if (confirmacion){
+                alert("¡Bienvenido, disfrute su estadía!")
+            }else{
+                alert("por favor, vuelva a ingresar su Documento Correctamente")
+            }
+        }
+
+    
+
+    const prendas = {
+        "Remeras negras con estampados": 20000,
+        "Pantalones Jean Clasicos": 50000,
+        "Buzos de varios colores": 25000,
+    }
+
+    console.log ("El precio final es: $"+ servicios[0])
