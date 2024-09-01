@@ -56,10 +56,41 @@ if (nombre) {// continua si coloca su nombre
 
     
 
-    const prendas = {
-        "Remeras negras con estampados": 20000,
-        "Pantalones Jean Clasicos": 50000,
-        "Buzos de varios colores": 25000,
-    }
-
-    console.log ("El precio final es: $"+ servicios[0])
+        const prendas = [
+            {
+              nombre: "Camisa Oversize Negra",
+              categoria: "camisa",
+              precio: 20000,
+              tamaño: "M"
+            },
+            {
+              nombre: "Jeans de mezclilla",
+              categoria: "pantalones",
+              precio: 40000,
+              tamaño: "L"
+            },
+            {
+              nombre: "Chaqueta de cuero",
+              categoria: "chaqueta",
+              precio: 20000,
+              tamaño: "S"
+            },
+            {
+              nombre: "Vestido de verano",
+              categoria: "vestido",
+              precio: 30000,
+              tamaño: "M"
+            },
+            {
+              nombre: "Suéter de lana",
+              categoria: "suéter",
+              precio: 25000,
+              tamaño: "L"
+            }
+          ];
+          
+          const total = prendas.reduce((acumulador, producto) => {
+            return acumulador + producto.precio;
+          }, 0);
+          
+          console.log(`El precio total de todos los productos es: $${total.toFixed(2)}`);
