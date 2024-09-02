@@ -1,10 +1,20 @@
-let nombre = prompt("¡Hola! ¿Cómo te llamas?"); // saludar al usuario
 
-if (nombre) {// continua si coloca su nombre
+/*NOMBRE*/
+let nombre = "";
 
-    alert(`¡Hola, ${nombre}! Bienvenido`);  // saludar al usuario por su nombre
+while (nombre.trim() === "") {
+  nombre = prompt("Ingresa Tu Nombre:");
 
-  
+  nombre = nombre.toUpperCase(); //todo el nombre en mayuscula
+
+  // Si no se ingresa ningún nombre, mostrar un mensaje de error
+  if (nombre.trim() === "") {
+    alert("No ingresaste ningun dato. intentalo de nuevo.");
+  }
+}
+    alert(`¡Hola, ${nombre}!`);
+
+  /*EDAD*/
     function solicitarEdad() {
         let edad;
         do {
@@ -23,8 +33,7 @@ if (nombre) {// continua si coloca su nombre
         return edad;
     }
 
-    // pedir la edad del usuario
-    const edad = solicitarEdad();
+const edad = solicitarEdad();
 
     // verificar que se ingreso una edad valida
     if (edad !== null) {
@@ -39,9 +48,7 @@ if (nombre) {// continua si coloca su nombre
     } else {
         alert("No ingresaste tu edad, Intentelo más tarde");
     }
-    } else {
-        alert("No pusiste tu nombre"); //por si no pone su nombre, le tira el "no ingresaste tu nombre"
-    }
+    
 
     let documento = prompt ("Ingrese su DNI/Documento")
     if (documento !== null){
